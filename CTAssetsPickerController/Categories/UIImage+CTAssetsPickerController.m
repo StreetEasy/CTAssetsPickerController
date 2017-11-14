@@ -32,8 +32,7 @@
 
 + (UIImage *)ctassetsPickerImageNamed:(NSString *)name
 {
-    return [UIImage imageNamed:name inBundle:[NSBundle bundleWithPath:[[NSBundle bundleForClass:[CTAssetsPickerController class]]
-                                                                       pathForResource:@"CTAssetsPickerController" ofType:@"bundle"]] compatibleWithTraitCollection:nil];
+    return [UIImage imageNamed:name inBundle:[NSBundle bundleForClass:[CTAssetsPickerController class]] compatibleWithTraitCollection:nil];
 }
 
 @end
