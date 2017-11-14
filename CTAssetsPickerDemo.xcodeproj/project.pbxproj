@@ -47,6 +47,8 @@
 		3A8F6D3A1FBA48F400B420D2 /* NSNumberFormatter+CTAssetsPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = AD30D7F61AAE9D0400C79E3D /* NSNumberFormatter+CTAssetsPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A8F6D3B1FBA48F400B420D2 /* NSDateFormatter+CTAssetsPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = ADD965FE1AAD5780002A26A2 /* NSDateFormatter+CTAssetsPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		3A8F6D3C1FBA48F400B420D2 /* PHImageManager+CTAssetsPickerController.h in Headers */ = {isa = PBXBuildFile; fileRef = 0B3423A61CB6E9C7003509E0 /* PHImageManager+CTAssetsPickerController.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		3A8F6D451FBA5ADF00B420D2 /* CTAssetsPicker.strings in Resources */ = {isa = PBXBuildFile; fileRef = ADD966181AAD5780002A26A2 /* CTAssetsPicker.strings */; };
+		3A8F6D461FBA5ADF00B420D2 /* CTAssetsPicker.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ADD9661A1AAD5780002A26A2 /* CTAssetsPicker.xcassets */; };
 		AD0786D91B428313003C8863 /* CTBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0786D81B428313003C8863 /* CTBasicViewController.m */; };
 		AD0786DF1B42864F003C8863 /* CTSelectedAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0786DE1B42864F003C8863 /* CTSelectedAssetsViewController.m */; };
 		AD0786E21B428A73003C8863 /* CTDefaultAlbumViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = AD0786E11B428A73003C8863 /* CTDefaultAlbumViewController.m */; };
@@ -622,6 +624,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3A8F6D451FBA5ADF00B420D2 /* CTAssetsPicker.strings in Resources */,
+				3A8F6D461FBA5ADF00B420D2 /* CTAssetsPicker.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
