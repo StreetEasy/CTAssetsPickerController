@@ -179,15 +179,17 @@
 
     for (NSNumber *subtypeNumber in self.picker.assetCollectionSubtypes)
     {
-        PHAssetCollectionType type       = [PHAssetCollection ctassetPickerAssetCollectionTypeOfSubtype:subtypeNumber.integerValue];
         PHAssetCollectionSubtype subtype = subtypeNumber.integerValue;
-        
-        PHFetchResult *fetchResult =
-        [PHAssetCollection fetchAssetCollectionsWithType:type
-                                                 subtype:subtype
-                                                 options:self.picker.assetCollectionFetchOptions];
-        
-        [fetchResults addObject:fetchResult];
+        NSArray *assetCollectionTypes = [PHAssetCollection ctAssetPickerAssetCollectionTypesForSubtype:subtype];
+        for (NSNumber *typeNumber in assetCollectionTypes)
+        {
+            PHAssetCollectionType type = typeNumber.integerValue;
+            PHFetchResult *fetchResult =
+            [PHAssetCollection fetchAssetCollectionsWithType:type
+                                                     subtype:subtype
+                                                     options:self.picker.assetCollectionFetchOptions];
+            [fetchResults addObject:fetchResult];
+        }
     }
     
     self.fetchResults = [NSMutableArray arrayWithArray:fetchResults];
@@ -234,9 +236,14 @@
         self.defaultAssetCollection = nil;
         return;
     }
-    
-    PHAssetCollectionType type = [PHAssetCollection ctassetPickerAssetCollectionTypeOfSubtype:self.picker.defaultAssetCollection];
-    PHFetchResult *fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:type subtype:self.picker.defaultAssetCollection options:self.picker.assetCollectionFetchOptions];
+
+    PHAssetCollectionSubtype subtype = self.picker.defaultAssetCollection;
+    NSArray<NSNumber*> *types = [PHAssetCollection ctAssetPickerAssetCollectionTypesForSubtype:subtype];
+    PHAssetCollectionType firstType = types[0].intValue;
+    PHFetchResult *fetchResult =
+    [PHAssetCollection fetchAssetCollectionsWithType:firstType
+                                             subtype:self.picker.defaultAssetCollection
+                                             options:self.picker.assetCollectionFetchOptions];
     
     self.defaultAssetCollection = fetchResult.firstObject;
 }

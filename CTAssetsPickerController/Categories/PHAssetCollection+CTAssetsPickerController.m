@@ -31,9 +31,18 @@
 
 @implementation PHAssetCollection (CTAssetsPickerController)
 
-+ (PHAssetCollectionType)ctassetPickerAssetCollectionTypeOfSubtype:(PHAssetCollectionSubtype)subtype
++ (NSArray<NSNumber*> *)ctAssetPickerAssetCollectionTypesForSubtype:(PHAssetCollectionSubtype)subtype
 {
-    return (subtype >= PHAssetCollectionSubtypeSmartAlbumGeneric) ? PHAssetCollectionTypeSmartAlbum : PHAssetCollectionTypeAlbum;
+    NSNumber *album = [NSNumber numberWithInt:PHAssetCollectionTypeAlbum];
+    NSNumber *smartAlbum = [NSNumber numberWithInt:PHAssetCollectionTypeSmartAlbum];
+    if (subtype == PHAssetCollectionSubtypeAny)
+    {
+        return @[album, smartAlbum];
+    }
+    else
+    {
+        return (subtype >= PHAssetCollectionSubtypeSmartAlbumGeneric) ? @[smartAlbum] : @[album];
+    }
 }
 
 - (NSUInteger)ctassetPikcerCountOfAssetsFetchedWithOptions:(PHFetchOptions *)fetchOptions

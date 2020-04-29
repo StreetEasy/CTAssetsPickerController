@@ -28,7 +28,7 @@
 
 @interface PHAssetCollection (CTAssetsPickerController)
 
-+ (PHAssetCollectionType)ctassetPickerAssetCollectionTypeOfSubtype:(PHAssetCollectionSubtype)subtype;
++ (NSArray<NSNumber*> *)ctAssetPickerAssetCollectionTypesForSubtype:(PHAssetCollectionSubtype)subtype;
 - (NSUInteger)ctassetPikcerCountOfAssetsFetchedWithOptions:(PHFetchOptions *)fetchOptions;
 - (UIImage *)badgeImage;
 
