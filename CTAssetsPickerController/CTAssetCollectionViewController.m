@@ -180,27 +180,14 @@
     for (NSNumber *subtypeNumber in self.picker.assetCollectionSubtypes)
     {
         PHAssetCollectionSubtype subtype = subtypeNumber.integerValue;
-        PHFetchResult *fetchResult;
-        if (subtype == PHAssetCollectionSubtypeAny)
+        NSArray *assetCollectionTypes = [PHAssetCollection ctAssetPickerAssetCollectionTypesForSubtype:subtype];
+        for (NSNumber *typeNumber in assetCollectionTypes)
         {
-            // when the subtype is .any, fetch albums with type of both album and smart album
-            fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum
-                                                                   subtype:subtype
-                                                                   options:self.picker.assetCollectionFetchOptions];
-            [fetchResults addObject:fetchResult];
-            fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum
-                                                                   subtype:subtype
-                                                                   options:self.picker.assetCollectionFetchOptions];
-            [fetchResults addObject:fetchResult];
-        }
-        else
-        {
-            PHAssetCollectionType type =
-            [PHAssetCollection ctassetPickerAssetCollectionTypeOfSubtype:subtypeNumber.integerValue];
-
-            fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:type
-                                                                   subtype:subtype
-                                                                   options:self.picker.assetCollectionFetchOptions];
+            PHAssetCollectionType type = typeNumber.integerValue;
+            PHFetchResult *fetchResult =
+            [PHAssetCollection fetchAssetCollectionsWithType:type
+                                                     subtype:subtype
+                                                     options:self.picker.assetCollectionFetchOptions];
             [fetchResults addObject:fetchResult];
         }
     }
@@ -249,9 +236,14 @@
         self.defaultAssetCollection = nil;
         return;
     }
-    
-    PHAssetCollectionType type = [PHAssetCollection ctassetPickerAssetCollectionTypeOfSubtype:self.picker.defaultAssetCollection];
-    PHFetchResult *fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:type subtype:self.picker.defaultAssetCollection options:self.picker.assetCollectionFetchOptions];
+
+    PHAssetCollectionSubtype subtype = self.picker.defaultAssetCollection;
+    NSArray<NSNumber*> *types = [PHAssetCollection ctAssetPickerAssetCollectionTypesForSubtype:subtype];
+    PHAssetCollectionType firstType = types[0].intValue;
+    PHFetchResult *fetchResult =
+    [PHAssetCollection fetchAssetCollectionsWithType:firstType
+                                             subtype:self.picker.defaultAssetCollection
+                                             options:self.picker.assetCollectionFetchOptions];
     
     self.defaultAssetCollection = fetchResult.firstObject;
 }
