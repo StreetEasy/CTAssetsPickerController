@@ -179,15 +179,30 @@
 
     for (NSNumber *subtypeNumber in self.picker.assetCollectionSubtypes)
     {
-        PHAssetCollectionType type       = [PHAssetCollection ctassetPickerAssetCollectionTypeOfSubtype:subtypeNumber.integerValue];
         PHAssetCollectionSubtype subtype = subtypeNumber.integerValue;
-        
-        PHFetchResult *fetchResult =
-        [PHAssetCollection fetchAssetCollectionsWithType:type
-                                                 subtype:subtype
-                                                 options:self.picker.assetCollectionFetchOptions];
-        
-        [fetchResults addObject:fetchResult];
+        PHFetchResult *fetchResult;
+        if (subtype == PHAssetCollectionSubtypeAny)
+        {
+            // when the subtype is .any, fetch albums with type of both album and smart album
+            fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeAlbum
+                                                                   subtype:subtype
+                                                                   options:self.picker.assetCollectionFetchOptions];
+            [fetchResults addObject:fetchResult];
+            fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:PHAssetCollectionTypeSmartAlbum
+                                                                   subtype:subtype
+                                                                   options:self.picker.assetCollectionFetchOptions];
+            [fetchResults addObject:fetchResult];
+        }
+        else
+        {
+            PHAssetCollectionType type =
+            [PHAssetCollection ctassetPickerAssetCollectionTypeOfSubtype:subtypeNumber.integerValue];
+
+            fetchResult = [PHAssetCollection fetchAssetCollectionsWithType:type
+                                                                   subtype:subtype
+                                                                   options:self.picker.assetCollectionFetchOptions];
+            [fetchResults addObject:fetchResult];
+        }
     }
     
     self.fetchResults = [NSMutableArray arrayWithArray:fetchResults];
