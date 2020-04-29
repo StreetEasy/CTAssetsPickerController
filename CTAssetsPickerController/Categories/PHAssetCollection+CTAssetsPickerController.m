@@ -39,12 +39,9 @@
     {
         return @[album, smartAlbum];
     }
-    else if (subtype >= PHAssetCollectionSubtypeSmartAlbumGeneric)
+    else
     {
-        return @[smartAlbum];
-    }
-    else {
-        return @[album];
+        return (subtype >= PHAssetCollectionSubtypeSmartAlbumGeneric) ? @[smartAlbum] : @[album];
     }
 }
 
