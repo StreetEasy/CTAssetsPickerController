@@ -55,10 +55,6 @@
 
 @end
 
-
-
-
-
 @implementation CTAssetsPageViewController
 
 - (instancetype)initWithFetchResult:(PHFetchResult *)fetchResult

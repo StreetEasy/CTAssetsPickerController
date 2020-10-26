@@ -34,8 +34,6 @@
 
 @end
 
-
-
 @implementation CTAssetsPageView
 
 - (instancetype)initWithFrame:(CGRect)frame
