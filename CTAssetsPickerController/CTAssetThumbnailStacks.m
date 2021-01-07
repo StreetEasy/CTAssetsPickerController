@@ -24,7 +24,7 @@
  
  */
 
-#import <PureLayout/PureLayout.h>
+@import PureLayout;
 #import "CTAssetsPickerDefines.h"
 #import "CTAssetThumbnailStacks.h"
 #import "CTAssetThumbnailView.h"

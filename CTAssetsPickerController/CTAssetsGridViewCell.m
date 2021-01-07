@@ -24,7 +24,7 @@
  
  */
 
-#import <PureLayout/PureLayout.h>
+@import PureLayout;
 #import "CTAssetsPickerDefines.h"
 #import "CTAssetsGridViewCell.h"
 #import "CTAssetsGridSelectedView.h"

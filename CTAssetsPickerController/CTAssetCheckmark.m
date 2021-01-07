@@ -24,11 +24,10 @@
  
  */
 
-#import <PureLayout/PureLayout.h>
 #import "CTAssetCheckmark.h"
 #import "NSBundle+CTAssetsPickerController.h"
 #import "UIImage+CTAssetsPickerController.h"
-
+@import PureLayout;
 
 /**
  *  The check mark to show selected asset.

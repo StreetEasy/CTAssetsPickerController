@@ -24,7 +24,7 @@
  
  */
 
-#import <PureLayout/PureLayout.h>
+@import PureLayout;
 #import "CTAssetPlayButton.h"
 #import "NSBundle+CTAssetsPickerController.h"
 #import "UIImage+CTAssetsPickerController.h"

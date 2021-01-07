@@ -24,7 +24,7 @@
  
  */
 
-#import <PureLayout/PureLayout.h>
+@import PureLayout;
 #import "CTAssetScrollView.h"
 #import "CTAssetPlayButton.h"
 #import "PHAsset+CTAssetsPickerController.h"
