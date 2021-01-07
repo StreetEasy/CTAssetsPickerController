@@ -67,7 +67,6 @@ CTAssetsPickerController/CTAssetsPickerController.bundle
 
 # Carthage
 Carthage
-Carthage
 
 # fastlane
 #
@@ -86,3 +85,5 @@ fastlane/screenshots
 
 ## Directory-based project format:
 .idea/
+
+.swiftpm

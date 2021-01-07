@@ -24,13 +24,11 @@
  
  */
 
-#import <PureLayout/PureLayout.h>
 #import "CTAssetSelectionButton.h"
 #import "CTAssetCheckmark.h"
 #import "NSBundle+CTAssetsPickerController.h"
 #import "UIImage+CTAssetsPickerController.h"
-
-
+@import PureLayout;
 
 @interface CTAssetSelectionButton ()
 

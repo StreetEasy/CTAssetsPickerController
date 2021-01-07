@@ -1,0 +1,16 @@
+{
+  "object": {
+    "pins": [
+      {
+        "package": "PureLayout",
+        "repositoryURL": "https://github.com/PureLayout/PureLayout.git",
+        "state": {
+          "branch": null,
+          "revision": "6fd4f2f875157d29d5ef00fbaaac149d91df5dcc",
+          "version": "3.1.7"
+        }
+      }
+    ]
+  },
+  "version": 1
+}
