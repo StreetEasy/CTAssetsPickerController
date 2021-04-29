@@ -26,7 +26,7 @@
 
 #import <UIKit/UIKit.h>
 #import <Photos/Photos.h>
-
+#import "CTAssetsPageViewController.h"
 
 
 NS_ASSUME_NONNULL_BEGIN
