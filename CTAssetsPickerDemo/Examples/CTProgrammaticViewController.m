@@ -89,7 +89,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            CTAssetsPickerViewController *picker = [[CTAssetsPickerViewController alloc] init];
             
             // set delegate
             picker.delegate = self;
@@ -113,7 +113,7 @@
     }];
 }
 
-- (void)selectAssetsForAssetsPickertController:(CTAssetsPickerController *)picker
+- (void)selectAssetsForAssetsPickertController:(CTAssetsPickerViewController *)picker
 {
     NSInteger count = 0;
     CGFloat pause = 1.0;

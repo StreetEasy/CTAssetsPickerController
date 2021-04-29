@@ -37,7 +37,7 @@ FOUNDATION_EXPORT const unsigned char CTAssetsPickerVersionString[];
 #import <CTAssetsPicker/CTAssetsPageView.h>
 #import <CTAssetsPicker/CTAssetsPageViewController.h>
 #import <CTAssetsPicker/CTAssetsPickerAccessDeniedView.h>
-#import <CTAssetsPicker/CTAssetsPickerController.h>
+#import <CTAssetsPicker/CTAssetsPickerViewController.h>
 #import <CTAssetsPicker/CTAssetsPickerDefines.h>
 #import <CTAssetsPicker/CTAssetsPickerNoAssetsView.h>
 #import <CTAssetsPicker/CTAssetsViewControllerTransition.h>

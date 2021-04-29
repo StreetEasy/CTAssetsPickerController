@@ -26,7 +26,7 @@
 
 
 @import PureLayout;
-#import "CTAssetsPickerController.h"
+#import "CTAssetsPickerViewController.h"
 #import "CTAssetItemViewController.h"
 #import "CTAssetScrollView.h"
 #import "NSBundle+CTAssetsPickerController.h"
@@ -38,7 +38,7 @@
 
 @interface CTAssetItemViewController ()
 
-@property (nonatomic, weak) CTAssetsPickerController *picker;
+@property (nonatomic, weak) CTAssetsPickerViewController *picker;
 
 @property (nonatomic, strong) PHAsset *asset;
 @property (nonatomic, strong) UIImage *image;
@@ -116,9 +116,9 @@
 
 #pragma mark - Accessors
 
-- (CTAssetsPickerController *)picker
+- (CTAssetsPickerViewController *)picker
 {
-    return (CTAssetsPickerController *)self.splitViewController.parentViewController;
+    return (CTAssetsPickerViewController *)self.splitViewController.parentViewController;
 }
 
 

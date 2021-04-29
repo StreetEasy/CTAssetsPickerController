@@ -25,7 +25,7 @@
  */
 
 #import <UIKit/UIKit.h>
-#import <CTAssetsPickerController/CTAssetsPickerController.h>
+#import <CTAssetsPickerController/CTAssetsPickerViewController.h>
 #import <CTAssetsPickerController/CTAssetsPageViewController.h>
 
 @interface CTBasicViewController : UITableViewController

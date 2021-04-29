@@ -64,7 +64,7 @@
     self.font   = [UIFont fontWithName:@"Futura-Medium" size:22.0];
 
     // Navigation Bar apperance
-    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:[CTAssetsPickerController class], nil];
+    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil];
     
     // set nav bar style to black to force light content status bar style
     navBar.barStyle = UIBarStyleBlack;
@@ -81,12 +81,12 @@
       NSFontAttributeName : self.font};
     
     // bar button item appearance
-    UIBarButtonItem *barButtonItem = [UIBarButtonItem appearanceWhenContainedIn:[CTAssetsPickerController class], nil];
+    UIBarButtonItem *barButtonItem = [UIBarButtonItem appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil];
     [barButtonItem setTitleTextAttributes:@{NSFontAttributeName : [self.font fontWithSize:18.0]}
                                  forState:UIControlStateNormal];
     
     // albums view
-    UITableView *assetCollectionView = [UITableView appearanceWhenContainedIn:[CTAssetsPickerController class], nil];
+    UITableView *assetCollectionView = [UITableView appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil];
     assetCollectionView.backgroundColor = self.color2;
     
     // asset collection appearance
@@ -143,7 +143,7 @@
     assetsPageView.fullscreenBackgroundColor = self.color2;
     
     // progress view
-    [UIProgressView appearanceWhenContainedIn:[CTAssetsPickerController class], nil].tintColor = self.color1;
+    [UIProgressView appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil].tintColor = self.color1;
     
 }
 
@@ -151,7 +151,7 @@
 {
     // reset appearance
     // for demo purpose. it is not necessary to reset appearance in real case.
-    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:[CTAssetsPickerController class], nil];
+    UINavigationBar *navBar = [UINavigationBar appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil];
     
     navBar.barStyle = UIBarStyleDefault;
     
@@ -161,11 +161,11 @@
     
     navBar.titleTextAttributes = nil;
     
-    UIBarButtonItem *barButtonItem = [UIBarButtonItem appearanceWhenContainedIn:[CTAssetsPickerController class], nil];
+    UIBarButtonItem *barButtonItem = [UIBarButtonItem appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil];
     [barButtonItem setTitleTextAttributes:nil
                                       forState:UIControlStateNormal];
     
-    UITableView *assetCollectionView = [UITableView appearanceWhenContainedIn:[CTAssetsPickerController class], nil];
+    UITableView *assetCollectionView = [UITableView appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil];
     assetCollectionView.backgroundColor = [UIColor whiteColor];
     
     CTAssetCollectionViewCell *assetCollectionViewCell = [CTAssetCollectionViewCell appearance];
@@ -211,7 +211,7 @@
     assetsPageView.pageBackgroundColor = nil;
     assetsPageView.fullscreenBackgroundColor = nil;
     
-    [UIProgressView appearanceWhenContainedIn:[CTAssetsPickerController class], nil].tintColor = nil;
+    [UIProgressView appearanceWhenContainedIn:[CTAssetsPickerViewController class], nil].tintColor = nil;
 }
 
 
@@ -221,7 +221,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            CTAssetsPickerViewController *picker = [[CTAssetsPickerViewController alloc] init];
             
             // set delegate
             picker.delegate = self;

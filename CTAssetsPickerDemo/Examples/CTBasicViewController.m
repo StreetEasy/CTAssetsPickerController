@@ -94,7 +94,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
 
             // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            CTAssetsPickerViewController *picker = [[CTAssetsPickerViewController alloc] init];
             
             // set delegate
             picker.delegate = self;
@@ -163,7 +163,7 @@
 
 #pragma mark - Assets Picker Delegate
 
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray *)assets
+- (void)assetsPickerController:(CTAssetsPickerViewController *)picker didFinishPickingAssets:(NSArray *)assets
 {
     [picker dismissViewControllerAnimated:YES completion:nil];
 

@@ -36,7 +36,7 @@ NS_ASSUME_NONNULL_BEGIN
 /**
  *  A controller that allows picking multiple photos and videos from user's photo library.
  */
-@interface CTAssetsPickerController : UIViewController
+@interface CTAssetsPickerViewController : UIViewController
 
 /**
  *  The assets picker’s delegate object.
@@ -176,7 +176,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  The delegate methods are responsible for dismissing the picker when the operation completes.
  *  To dismiss the picker, call the `dismissViewControllerAnimated:completion:` method of the presenting controller
- *  responsible for displaying `CTAssetsPickerController` object.
+ *  responsible for displaying `CTAssetsPickerViewController` object.
  *
  *  The picked assets are `PHAsset` objects and contain only metadata. The underlying image or video data for any given asset might not be stored on the local device.
  *  You have to use `PHImageManager` object for loading image or video data associated with a `PHAsset`.
@@ -196,7 +196,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerControllerDidCancel:
  */
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didFinishPickingAssets:(NSArray<PHAsset*> *)assets;
+- (void)assetsPickerController:(CTAssetsPickerViewController *)picker didFinishPickingAssets:(NSArray<PHAsset*> *)assets;
 
 @optional
 
@@ -207,7 +207,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:didFinishPickingAssets:
  */
-- (void)assetsPickerControllerDidCancel:(CTAssetsPickerController *)picker;
+- (void)assetsPickerControllerDidCancel:(CTAssetsPickerViewController *)picker;
 
 
 /**
@@ -223,7 +223,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return Custom `UICollectionViewLayout` for the asset selection view.
  */
-- (UICollectionViewLayout *)assetsPickerController:(CTAssetsPickerController *)picker collectionViewLayoutForContentSize:(CGSize)contentSize traitCollection:(UITraitCollection *)trait;
+- (UICollectionViewLayout *)assetsPickerController:(CTAssetsPickerViewController *)picker collectionViewLayoutForContentSize:(CGSize)contentSize traitCollection:(UITraitCollection *)trait;
 
 
 /**
@@ -235,7 +235,7 @@ NS_ASSUME_NONNULL_BEGIN
  *  @return `YES` (the default) if the asset grid should scroll to bottom on shown or `NO` if it should not.
  */
 
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldScrollToBottomForAssetCollection:(PHAssetCollection *)assetCollection;
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldScrollToBottomForAssetCollection:(PHAssetCollection *)assetCollection;
 
 
 /**
@@ -252,7 +252,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:shouldShowAsset:
  */
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldEnableAsset:(PHAsset *)asset;
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldEnableAsset:(PHAsset *)asset;
 
 
 /**
@@ -269,7 +269,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:shouldDeselectAsset:
  */
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(PHAsset *)asset;
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldSelectAsset:(PHAsset *)asset;
 
 /**
  *  Tells the delegate that the asset was selected.
@@ -279,7 +279,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:didDeselectAsset:
  */
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didSelectAsset:(PHAsset *)asset;
+- (void)assetsPickerController:(CTAssetsPickerViewController *)picker didSelectAsset:(PHAsset *)asset;
 
 /**
  *  Asks the delegate if the specified asset should be deselected.
@@ -291,7 +291,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:shouldSelectAsset:
  */
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldDeselectAsset:(PHAsset *)asset;
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldDeselectAsset:(PHAsset *)asset;
 
 /**
  *  Tells the delegate that the item at the specified path was deselected.
@@ -301,7 +301,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:didSelectAsset:
  */
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didDeselectAsset:(PHAsset *)asset;
+- (void)assetsPickerController:(CTAssetsPickerViewController *)picker didDeselectAsset:(PHAsset *)asset;
 
 
 
@@ -317,7 +317,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @return `YES` if the asset should be highlighted or `NO` if it should not.
  */
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldHighlightAsset:(PHAsset *)asset;
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldHighlightAsset:(PHAsset *)asset;
 
 /**
  *  Tells the delegate that asset was highlighted.
@@ -327,7 +327,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:didUnhighlightAsset:
  */
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didHighlightAsset:(PHAsset *)asset;
+- (void)assetsPickerController:(CTAssetsPickerViewController *)picker didHighlightAsset:(PHAsset *)asset;
 
 
 /**
@@ -338,7 +338,7 @@ NS_ASSUME_NONNULL_BEGIN
  *
  *  @see assetsPickerController:didHighlightAsset:
  */
-- (void)assetsPickerController:(CTAssetsPickerController *)picker didUnhighlightAsset:(PHAsset *)asset;
+- (void)assetsPickerController:(CTAssetsPickerViewController *)picker didUnhighlightAsset:(PHAsset *)asset;
 
 
 

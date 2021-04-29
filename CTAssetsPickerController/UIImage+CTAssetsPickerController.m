@@ -24,7 +24,7 @@
  
  */
 
-#import "CTAssetsPickerController.h"
+#import "CTAssetsPickerViewController.h"
 #import "UIImage+CTAssetsPickerController.h"
 #import "NSBundle+CTAssetsPickerController.h"
 

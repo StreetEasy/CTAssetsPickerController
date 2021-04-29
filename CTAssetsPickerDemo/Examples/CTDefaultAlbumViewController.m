@@ -35,7 +35,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            CTAssetsPickerViewController *picker = [[CTAssetsPickerViewController alloc] init];
             
             // set delegate
             picker.delegate = self;

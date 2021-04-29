@@ -26,7 +26,7 @@
 
 
 #import "CTAssetsPickerDefines.h"
-#import "CTAssetsPickerController.h"
+#import "CTAssetsPickerViewController.h"
 #import "CTAssetsPickerAccessDeniedView.h"
 #import "CTAssetsPickerNoAssetsView.h"
 #import "CTAssetCollectionViewController.h"
@@ -47,7 +47,7 @@ NSString * const CTAssetsPickerDidDeselectAssetNotification = @"CTAssetsPickerDi
 
 
 
-@interface CTAssetsPickerController ()
+@interface CTAssetsPickerViewController ()
 <PHPhotoLibraryChangeObserver, UISplitViewControllerDelegate, UINavigationControllerDelegate>
 
 @property (nonatomic, assign) BOOL shouldCollapseDetailViewController;
@@ -61,7 +61,7 @@ NSString * const CTAssetsPickerDidDeselectAssetNotification = @"CTAssetsPickerDi
 
 
 
-@implementation CTAssetsPickerController
+@implementation CTAssetsPickerViewController
 
 - (instancetype)initWithNibName:(NSString *)nibNameOrNil bundle:(NSBundle *)nibBundleOrNil
 {

@@ -29,7 +29,7 @@
 
 @implementation CTLayoutViewController
 
-- (UICollectionViewLayout *)assetsPickerController:(CTAssetsPickerController *)picker collectionViewLayoutForContentSize:(CGSize)contentSize traitCollection:(UITraitCollection *)trait
+- (UICollectionViewLayout *)assetsPickerController:(CTAssetsPickerViewController *)picker collectionViewLayoutForContentSize:(CGSize)contentSize traitCollection:(UITraitCollection *)trait
 {
     UICollectionViewFlowLayout *layout = [UICollectionViewFlowLayout new];
     layout.itemSize = CGSizeMake(175, 175);

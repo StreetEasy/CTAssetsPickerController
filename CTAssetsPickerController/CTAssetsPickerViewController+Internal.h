@@ -24,7 +24,7 @@
  
  */
 
-@interface CTAssetsPickerController (Internal)
+@interface CTAssetsPickerViewController (Internal)
 
 - (void)dismiss:(id)sender;
 - (void)finishPickingAssets:(id)sender;

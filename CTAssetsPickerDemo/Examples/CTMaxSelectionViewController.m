@@ -35,7 +35,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            CTAssetsPickerViewController *picker = [[CTAssetsPickerViewController alloc] init];
             
             // set delegate
             picker.delegate = self;
@@ -52,7 +52,7 @@
 }
 
 // implement should select asset delegate
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldSelectAsset:(PHAsset *)asset
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldSelectAsset:(PHAsset *)asset
 {
     NSInteger max = 3;
     

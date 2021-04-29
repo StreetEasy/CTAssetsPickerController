@@ -25,8 +25,8 @@
  */
 
 #import "CTAssetsPickerDefines.h"
-#import "CTAssetsPickerController.h"
-#import "CTAssetsPickerController+Internal.h"
+#import "CTAssetsPickerViewController.h"
+#import "CTAssetsPickerViewController+Internal.h"
 #import "CTAssetsGridViewController.h"
 #import "CTAssetsGridView.h"
 #import "CTAssetsGridViewLayout.h"
@@ -52,7 +52,7 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
 @interface CTAssetsGridViewController ()
 <PHPhotoLibraryChangeObserver>
 
-@property (nonatomic, weak) CTAssetsPickerController *picker;
+@property (nonatomic, weak) CTAssetsPickerViewController *picker;
 @property (nonatomic, strong) PHFetchResult *fetchResult;
 @property (nonatomic, strong) PHCachingImageManager *imageManager;
 
@@ -154,9 +154,9 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
 
 #pragma mark - Accessors
 
-- (CTAssetsPickerController *)picker
+- (CTAssetsPickerViewController *)picker
 {
-    return (CTAssetsPickerController *)self.splitViewController.parentViewController;
+    return (CTAssetsPickerViewController *)self.splitViewController.parentViewController;
 }
 
 - (PHAsset *)assetAtIndexPath:(NSIndexPath *)indexPath

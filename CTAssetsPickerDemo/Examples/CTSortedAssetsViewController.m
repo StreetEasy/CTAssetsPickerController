@@ -35,7 +35,7 @@
         dispatch_async(dispatch_get_main_queue(), ^{
             
             // init picker
-            CTAssetsPickerController *picker = [[CTAssetsPickerController alloc] init];
+            CTAssetsPickerViewController *picker = [[CTAssetsPickerViewController alloc] init];
             
             // set delegate
             picker.delegate = self;
@@ -59,7 +59,7 @@
 }
 
 
-- (BOOL)assetsPickerController:(CTAssetsPickerController *)picker shouldScrollToBottomForAssetCollection:(PHAssetCollection *)assetCollection
+- (BOOL)assetsPickerController:(CTAssetsPickerViewController *)picker shouldScrollToBottomForAssetCollection:(PHAssetCollection *)assetCollection
 {
     // As assets are sorted by date and latest assets are on top of grid view,
     // we do not scroll the asset grid view to the bottom on shown.

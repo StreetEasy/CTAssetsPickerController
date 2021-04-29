@@ -25,8 +25,8 @@
  */
 
 #import "CTAssetsPickerDefines.h"
-#import "CTAssetsPickerController.h"
-#import "CTAssetsPickerController+Internal.h"
+#import "CTAssetsPickerViewController.h"
+#import "CTAssetsPickerViewController+Internal.h"
 #import "CTAssetCollectionViewController.h"
 #import "CTAssetCollectionViewCell.h"
 #import "CTAssetsGridViewController.h"
@@ -42,7 +42,7 @@
 @interface CTAssetCollectionViewController()
 <PHPhotoLibraryChangeObserver, CTAssetsGridViewControllerDelegate>
 
-@property (nonatomic, weak) CTAssetsPickerController *picker;
+@property (nonatomic, weak) CTAssetsPickerViewController *picker;
 
 @property (nonatomic, strong) UIBarButtonItem *cancelButton;
 @property (nonatomic, strong) UIBarButtonItem *doneButton;
@@ -114,9 +114,9 @@
 
 #pragma mark - Accessors
 
-- (CTAssetsPickerController *)picker
+- (CTAssetsPickerViewController *)picker
 {
-    return (CTAssetsPickerController *)self.splitViewController.parentViewController;
+    return (CTAssetsPickerViewController *)self.splitViewController.parentViewController;
 }
 
 - (NSIndexPath *)indexPathForAssetCollection:(PHAssetCollection *)assetCollection
