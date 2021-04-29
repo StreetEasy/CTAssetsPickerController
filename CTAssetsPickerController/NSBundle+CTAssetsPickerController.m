@@ -25,13 +25,13 @@
  */
 
 #import "NSBundle+CTAssetsPickerController.h"
-#import "CTAssetsPickerController.h"
+#import "CTAssetsPickerViewController.h"
 
 @implementation NSBundle (CTAssetsPickerController)
 
 + (NSBundle *)ctassetsPickerBundle
 {
-    return [NSBundle bundleForClass:[CTAssetsPickerController class]];
+    return SWIFTPM_MODULE_BUNDLE;
 }
 
 
