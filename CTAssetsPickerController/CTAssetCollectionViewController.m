@@ -153,15 +153,16 @@
         
         self.doneButton =
         [[UIBarButtonItem alloc] initWithTitle:title
-                                         style:UIBarButtonItemStyleDone
+                                         style:UIBarButtonItemStylePlain
                                         target:self.picker
                                         action:@selector(finishPickingAssets:)];
     }
     
     if (self.cancelButton == nil)
     {
+        NSString *title = self.picker.cancelButtonTitle ?: CTAssetsPickerLocalizedString(@"Cancel", nil);
         self.cancelButton =
-        [[UIBarButtonItem alloc] initWithTitle:CTAssetsPickerLocalizedString(@"Cancel", nil)
+        [[UIBarButtonItem alloc] initWithTitle:title
                                          style:UIBarButtonItemStylePlain
                                         target:self.picker
                                         action:@selector(dismiss:)];

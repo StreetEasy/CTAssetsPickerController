@@ -94,6 +94,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (nonatomic, copy) NSString *doneButtonTitle;
 
 /**
+ *  An optional title for the cancel button
+ *
+ *  You can override the title of "Cancel" button by this value.
+ */
+@property (nonatomic, copy) NSString *cancelButtonTitle;
+
+/**
  *  Determines whether or not the cancel button is visible in the picker.
  *
  *  The cancel button is visible by default. To hide the cancel button, (e.g. presenting the picker in `UIPopoverController`)

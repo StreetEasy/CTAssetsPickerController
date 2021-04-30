@@ -351,8 +351,9 @@ NSString * const CTAssetsPickerDidDeselectAssetNotification = @"CTAssetsPickerDi
 {
     if (self.showsCancelButton)
     {
+        NSString *title = self.cancelButtonTitle ?: CTAssetsPickerLocalizedString(@"Cancel", nil);
         viewController.navigationItem.leftBarButtonItem =
-        [[UIBarButtonItem alloc] initWithTitle:CTAssetsPickerLocalizedString(@"Cancel", nil)
+        [[UIBarButtonItem alloc] initWithTitle:title
                                          style:UIBarButtonItemStylePlain
                                         target:self
                                         action:@selector(dismiss:)];
