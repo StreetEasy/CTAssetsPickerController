@@ -372,10 +372,8 @@
 
 - (void)resetTitle
 {
-    if (!self.picker.title)
-        self.title = CTAssetsPickerLocalizedString(@"Photos", nil);
-    else
-        self.title = self.picker.title;
+    self.title = self.picker.title ?: CTAssetsPickerLocalizedString(@"Photos", nil);
+    self.navigationItem.backButtonTitle = self.picker.navigationItem.backButtonTitle ?: self.title;
 }
 
 
