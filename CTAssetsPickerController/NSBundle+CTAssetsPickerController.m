@@ -31,7 +31,7 @@
 
 + (NSBundle *)ctassetsPickerBundle
 {
-    return [NSBundle bundleForClass:[CTAssetsPickerController class]];
+    return SWIFTPM_MODULE_BUNDLE;
 }
 
 
