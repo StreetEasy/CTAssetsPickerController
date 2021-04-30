@@ -184,7 +184,7 @@ NSString * const CTAssetsGridViewFooterIdentifier = @"CTAssetsGridViewFooterIden
         
         self.navigationItem.rightBarButtonItem =
         [[UIBarButtonItem alloc] initWithTitle:title
-                                         style:UIBarButtonItemStyleDone
+                                         style:UIBarButtonItemStylePlain
                                         target:self.picker
                                         action:@selector(finishPickingAssets:)];
     }
