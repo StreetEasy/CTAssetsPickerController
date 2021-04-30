@@ -1,0 +1,1 @@
+../CTAssetsPickerAccessDeniedView.h

@@ -15,8 +15,7 @@ let package = Package(
     targets: [
         .target(name: "CTAssetsPickerController",
                 dependencies: ["PureLayout"],
-                path: "CTAssetsPickerController",
-                publicHeadersPath: "")
+                path: "CTAssetsPickerController")
     ]
 )
 

@@ -1,0 +1,1 @@
+../CTAssetThumbnailOverlay.h
